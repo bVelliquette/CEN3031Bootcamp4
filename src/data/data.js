@@ -13,9 +13,6 @@ export default [
         id: 2,
         code: 'AGRL',
         name: 'Plant Pathology Research Lab 2',
-        coordinates: {
-            latitude: 69.420
-        }
     },
     {
         id: 3,

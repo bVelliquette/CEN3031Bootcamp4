@@ -66,8 +66,9 @@ class AddBuilding extends React.Component {
                     Longitude:
                     <input type="text" name="Longitude" placeholder="Enter Longitude" value={this.state.Longitude} onChange={this.handleInputChange}/>
                 </label>
-                <button onClick={this.handleClick.bind(this)}>
-                Submit
+                <br></br>
+                <button onClick={this.handleClick.bind(this)} className="addButton">
+                Add Building
                 </button>
             </form>
         );

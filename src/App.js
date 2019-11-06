@@ -15,23 +15,23 @@ class App extends React.Component {
   }
 
   filterUpdate(value) {
-    this.setState({filterText: value});
+    this.setState({ filterText: value });
   }
 
   selectedUpdate(id) {
-    this.setState({selectedBuilding: id});
+    this.setState({ selectedBuilding: id });
   }
 
   render() {
-    
+
     return (
       <div className="bg">
         <div className="row">
           <h1>UF Directory App</h1>
         </div>
-        
-        <Search 
-        filterUpdateFromApp={this.filterUpdate.bind(this)}
+
+        <Search
+          filterUpdateFromApp={this.filterUpdate.bind(this)}
         />
         <main>
           <div className="row">
@@ -52,17 +52,22 @@ class App extends React.Component {
               </div>
             </div>
             <div className="column2">
-              <ViewBuilding
-                selectedBuildingID={this.state.selectedBuilding}
-                data={this.props.data}
-                selectedUpdate={this.selectedUpdate.bind(this)}
-              />
-              <AddBuilding 
-              data ={this.props.data}
-              filterUpdate={this.filterUpdate.bind(this)}
-            />
+              <div className="viewColumn">
+                <ViewBuilding
+                  selectedBuildingID={this.state.selectedBuilding}
+                  data={this.props.data}
+                  selectedUpdate={this.selectedUpdate.bind(this)}
+                />
+              </div>
+              <div className="addColumn">
+                <h2>Add Building to Directory</h2>
+                <AddBuilding
+                  data={this.props.data}
+                  filterUpdate={this.filterUpdate.bind(this)}
+                />
+              </div>
+
             </div>
-            
           </div>
           <Credit />
         </main>

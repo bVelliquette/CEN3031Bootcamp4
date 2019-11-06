@@ -11,7 +11,7 @@ class RemoveBuilding extends React.Component {
     render() {
         return (
             <div className='RemoveBuilding'>
-                <button onClick={this.handleClick.bind(this)}>
+                <button onClick={this.handleClick.bind(this)} className="removeButton">
                 Remove Building
                 </button>
             </div>
